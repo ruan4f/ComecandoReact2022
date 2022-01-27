@@ -1,19 +1,18 @@
 import {
     BrowserRouter as Router,
+    Routes,
     Route
 } from "react-router-dom";
 import { Cart } from "./pages/Cart";
 import { Catalog } from "./pages/Catalog";
 
-export function Routes(){
+export function AppRoutes() {
     return (
         <Router>
-            <Route path="/catalog">
-                <Catalog />
-            </Route>
-            <Route path="/cart">
-                <Cart/>
-            </Route>
+            <Routes>
+                <Route path="/catalog" element={<Catalog />} />
+                <Route path="/cart" element={<Cart />} />
+            </Routes>
         </Router>
     )
 }

@@ -1,21 +1,22 @@
 import { useState } from "react";
 import { Tweet } from "./components/Tweet";
 import './App.css';
+import { AppRoutes } from "./Routes";
 
 
 function App() {
-  const [tweets, setTweets] = useState<string[]>([])
-
-  const [countTweets, setCountTweets] = useState<number>(1)
+  /*const [tweets, setTweets] = useState<string[]>([]);
+  const [countTweets, setCountTweets] = useState<number>(1);
 
   function createTweet() {
     setCountTweets(countTweets+1);
     const tweet = `Tweet ${countTweets}`;
     setTweets([...tweets, tweet]);
-  }
+  }*/
 
   return (
-    <div>
+    <AppRoutes/>
+    /*<div>
       {
         tweets.map((tweet, index) => {
           return <Tweet text={tweet} key={index}/>
@@ -33,7 +34,7 @@ function App() {
       >
         Adicionar Tweet
       </button>
-    </div>
+    </div>*/
   );
 }
 
